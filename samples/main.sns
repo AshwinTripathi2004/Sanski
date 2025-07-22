@@ -1,0 +1,4 @@
+rachay x = 10..
+rachay y = 20..
+rachay z = x+y..
+vad("Value of z is: " + str(z))..
