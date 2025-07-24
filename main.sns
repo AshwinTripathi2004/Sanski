@@ -1,0 +1,17 @@
+#rachay x = 10..
+#rachay y = 20..
+#rachay z = x+y..
+
+
+#vad("Value of x is: " + str(z))..
+
+
+
+
+rachay x = 10..
+yadi x > 5:
+    vad("Bada hai")..
+yadi_anya x == 5:
+    vad("Barabar hai")..
+anyatha:
+    vad("Chhota hai")..
