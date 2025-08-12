@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Sanski Language Docs 📜
 Welcome to the official documentation for Sanski, a simple, scriptable programming language with keywords inspired by Hindi and Sanskrit. This guide will walk you through everything from the basics to advanced features like Object-Oriented Programming.
 
@@ -312,3 +313,13 @@ While Loops: To complement the har_ek loop, we will be adding a jab_tak (while) 
 Improved Error Handling: We are working on making error messages more descriptive, including line numbers and clearer explanations, to make debugging your programs much easier.
 
 Stay tuned for more updates as we continue to grow the Sanski language!
+=======
+# 🚧 This section is currently under construction. Please check back soon. 
+     
+ 
+       
+        
+    
+   
+ 
+>>>>>>> 020b470e0ed37421f1cec1a0dd0fcbcff7098efb
