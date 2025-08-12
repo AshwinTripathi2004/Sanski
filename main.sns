@@ -1,0 +1,8 @@
+karya jodo(a, b):
+    vad("Sankhyaon ko jodna...")
+    vapasi a + b
+
+# Function call
+rachay parinaam = jodo(5, 3)
+vad(parinaam) 
+# Prints 8
