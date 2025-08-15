@@ -1,314 +1,250 @@
-Sanski Language Docs 📜
-Welcome to the official documentation for Sanski, a simple, scriptable programming language with keywords inspired by Hindi and Sanskrit. This guide will walk you through everything from the basics to advanced features like Object-Oriented Programming.
+📜 Sanski Language Docs
+Welcome to the official guide for Sanski, an elegant scripting language inspired by Sanskrit and Hindi, foundational pillars of India's linguistic heritage. By drawing from these modern languages, Sanski offers an intuitive coding experience for both new and experienced programmers.
+
+✨ Language Philosophy
+Sanski was created with a simple idea: programming should feel natural. By using words that are familiar to hundreds of millions of people, we lower the barrier to entry and make the logic of the code shine through. Our goal is to provide a language that is not only functional and powerful but also a joy to read and write.
 
 🚀 Getting Started
-Sanski code is interpreted by a Python script. To run your Sanski programs, you 'll need Python 3 installed.
+Getting your first Sanski program running is easy. All you need is Python 3 installed on your system.
 
-File Naming
-Sanski files should use the .sns extension (e.g., my_program.sns). 
+Step 1: Create Your File
+Sanski files use the .sns extension. Create a new file named pratham.sns.
 
-Execution
-To execute a Sanski file, run the interpreter from your terminal and pass the filename as an argument:
+Step 2: Write Your Code
+Open pratham.sns in your favorite editor and add this line:
 
-python sanski_interpreter.py your_file_name.sns
+# This is your first Sanski program!
+vad("Namaste, Sansar!") # Prints "Hello, World!" to the console
 
+Step 3: Run from Terminal
+Navigate to your project folder in your terminal and execute your script:
 
-Your First Program
-Create a file named pratham.sns and add the following line:
+python sanski_interpreter.py pratham.sns
 
-# This is a comment in Sanski
-vad("Namaste, Sansar!") # Prints "Namaste, Sansar!" to the console
+You should see Namaste, Sansar! printed on your screen. You're officially a Sanski programmer!
 
-
-Run it using the command above, and you should see the greeting printed to your screen.
-
-Core Concepts
-Let's dive into the fundamental building blocks of the Sanski language.
+🧠 Core Concepts
+Here are the fundamental building blocks of the Sanski language.
 
 Variables & Data Types
-Variables are containers for storing data. In Sanski, you create variables using the rachay keyword. Sanski supports several standard data types.
+Variables are used to store information. In Sanski, you declare them with the rachay (create) keyword.
 
 Syntax: rachay <variable_name> = <value>
 
-Numbers: Integers and floating-point numbers.
+Sanski supports all standard data types:
 
+# Numbers (Integers and Floats)
 rachay sankhya = 10
 rachay mulya = 99.5
 
-
-Strings: Text enclosed in double (") or single (') quotes.
-
+# Strings (Text)
 rachay naam = "Sanski"
 
+# Lists (Ordered, mutable collections)
+rachay soochi = [1, "do", True]
 
-Lists: Ordered collections of items, similar to arrays.
-
-rachay soochi = [1, "do", True, 3.14]
-
-
-Dictionaries: Key-value pairs.
-
+# Dictionaries (Key-value pairs)
 rachay shabdkosh = {'key': 'value', 'naam': 'Aditya'}
 
+Loops
+To perform repetitive tasks, Sanski uses the har_ek (for each) loop, which is perfect for iterating over lists.
 
-Note: Sanski uses Python's underlying evaluation engine, so it supports most standard Python expressions for data types and operators (+, -, *, /, ==, and, or, etc.).
-
-Control Flow: Loops
-To repeat actions, Sanski provides a for-in loop structure using the har_ek keyword.
-
-Syntax: har_ek <item_variable> mein <list_variable>:
-
-The loop iterates over each item in a list or other iterable.
+Syntax: har_ek <item> mein <list>:
 
 rachay phal = ["Seb", "Kela", "Santra"]
 
 har_ek p mein phal:
-    vad(p)
+    # This block runs for each item in the list
+    vad("Current fruit: " + p)
 
-# Output:
-# Seb
-# Kela
-# Santra
+You can control your loops with these keywords:
 
+roko: Immediately breaks out of the loop.
 
-You can control the loop's execution with roko (break) and jaari_rakho (continue).
-
-roko: Immediately exits the loop.
-
-jaari_rakho: Skips the rest of the current iteration and proceeds to the next one.
+jaari_rakho: Skips the current iteration and moves to the next.
 
 Functions
-Functions are reusable blocks of code. Define them using the karya keyword.
+Functions are reusable blocks of code. Define them with the karya (function) keyword and return values with vapasi (return).
 
-Syntax: karya <function_name>(<param1>, <param2>, ...):
+Syntax: karya <function_name>(<parameters>):
 
-Return Values: Use the vapasi keyword to return a value from a function.
-
-# Function definition
+# Defines a function that adds two numbers
 karya jodo(a, b):
-    vad("Sankhyaon ko jodna...")
     vapasi a + b
 
-# Function call
+# Calls the function and stores the result
 rachay parinaam = jodo(5, 3)
-vad(parinaam) # Prints 8
+vad(parinaam) # Output: 8
 
+🏛️ Object-Oriented Programming (OOP)
+Sanski provides a full suite of OOP features, allowing you to build robust and scalable applications.
 
-Object-Oriented Programming (OOP) 🏛️
-Sanski has a powerful OOP system that includes classes, objects, and inheritance.
+Classes & Constructors
+A class is a blueprint for creating objects. Use the varg (class) keyword to define one. The rachna (constructor) method is called when a new object is created.
 
-Classes
-A class is a blueprint for creating objects. Define a class using the varg keyword.
-
-Syntax: varg <ClassName>:
-
-Constructor & Properties
-The constructor is a special method called when an object is created. It's used to initialize object properties.
-
-Keyword: rachna (replaces __init__ in Python).
-
-Instance Reference: The first parameter of any method, including the constructor, must be svayam. This is Sanski's equivalent of self or this.
+Instance Reference: The first parameter of any method must be svayam (self).
 
 varg Vahan:
-    # Constructor
+    # The constructor initializes the object's properties
     rachna(svayam, naam, rang):
         rachay svayam.naam = naam
         rachay svayam.rang = rang
 
-    # Method
+    # A regular method that belongs to the class
     karya vivaran_do(svayam):
-        vad("Yeh ek " + svayam.naam + " hai jiska rang " + svayam.rang + " hai.")
+        vad("This is a " + svayam.rang + " " + svayam.naam)
 
-# Create an instance (object) of the Vahan class
+# Create a new object (instance) from the Vahan class
 rachay meri_car = Vahan("Car", "Neela")
 
 # Call a method on the object
-meri_car.vivaran_do() # Output: Yeh ek Car hai jiska rang Neela hai.
-
-# Access a property
-vad(meri_car.rang) # Output: Neela
-
+meri_car.vivaran_do() # Output: This is a Neela Car
 
 Inheritance
-Inheritance allows a class (child) to inherit properties and methods from another class (parent).
+Inheritance allows a class to inherit all the methods and properties from another class.
 
 Syntax: varg <ChildClass>(<ParentClass>):
-
-When a child class is instantiated:
-
-The parent class's constructor (rachna) is automatically called first.
-
-The child class's constructor is called next.
-
-Methods from the parent are available to the child object. If the child defines a method with the same name, it overrides the parent's method.
-
-Example:
 
 # Parent Class
 varg Prani:
     rachna(svayam):
-        rachay svayam.jeevit_hai = True
-        vad("Prani rachna ki gayi.")
+        vad("A new Prani (Animal) is born.")
 
     karya saans_lo(svayam):
-        vad("Saans le raha hai...")
+        vad("Breathing...")
 
-# Child Class inheriting from Prani
+# Child Class inherits from Prani
 varg Kutte(Prani):
     rachna(svayam, naam):
+        # The parent constructor is called automatically first!
         rachay svayam.naam = naam
-        vad("Kutte ki rachna ki gayi.")
-
-    karya bhonko(svayam):
-        vad("Bhow Bhow!")
+        vad("It's a Kutte (Dog) named " + svayam.naam)
 
 # Create an instance of the child class
 rachay mera_kutta = Kutte("Buddy")
 
-# Parent constructor was called, then child's
-# Output:
-# Prani rachna ki gayi.
-# Kutte ki rachna ki gayi.
+# The output shows both constructors were called:
+# > A new Prani (Animal) is born.
+# > It's a Kutte (Dog) named Buddy
 
-# Call inherited method
-mera_kutta.saans_lo() # Output: Saans le raha hai...
+# Call the inherited method from the Prani class
+mera_kutta.saans_lo() # Output: Breathing...
 
-# Call child's own method
-mera_kutta.bhonko() # Output: Bhow Bhow!
-
-
-Modules & Built-ins
+📚 Modules & Built-ins
 Importing Modules
-You can split your code into multiple files and import them using the aayat keyword. This helps organize large projects.
+Organize your project by splitting code into multiple files. Use aayat (import) to use code from another file.
 
 Syntax: aayat "<filename>.sns"
 
-Imagine you have helpers.sns:
+For example, if you have helpers.sns with a function, you can use it in main.sns:
 
-# helpers.sns
-karya alvida_kaho():
-    vad("Alvida!")
-
-
-You can use it in main.sns:
-
-# main.sns
+# In main.sns
 aayat "helpers.sns"
 
-vad("Namaste!")
+# Now you can use any function defined in helpers.sns
 alvida_kaho()
 
-# Output:
-# Namaste!
-# Alvida!
+Built-in Functions
+Sanski includes a rich set of built-in functions for common tasks. See the Cheat Sheet below for a quick reference.
 
+🗺️ Roadmap: What's Next?
+Sanski is an actively developed language. Here are the features we're excited to build next:
 
-Important: The path in aayat is relative to the file you are running.
+Conditional Logic (yadi/anyatha): The top priority is adding if/else statements to allow for decision-making in your code.
 
-Built-in Functions Reference 📚
-Sanski comes with a set of useful built-in functions.
+While Loops (jab_tak): A while loop is planned to handle situations where the number of iterations isn't known beforehand.
+
+Enhanced Error Reporting: We're working on providing more detailed error messages, including line numbers, to make debugging a breeze.
+
+cheat Sheet
+Here is a quick reference for all Sanski keywords and built-in functions.
+
+Keyword
+
+Type
+
+Purpose
+
+rachay
+
+Statement
+
+Declare a new variable.
+
+vad
 
 Function
 
-Description
+Print a value to the console.
 
-Example
+karya
 
-vad(expr)
+Statement
 
-Prints the evaluated expression to the console.
+Define a new function.
 
-vad("Hello" + " " + "World")
+vapasi
 
-grahan_karo(prompt)
+Statement
 
-Reads a line of input from the user.
+Return a value from a function.
 
-rachay naam = grahan_karo("Aapka naam kya hai? ")
+varg
 
-lambai(data)
+Statement
 
-Returns the length of a string, list, or dictionary.
+Define a new class.
 
-rachay l = lambai([1,2,3])
+rachna
 
-jodo(list, item)
+Method
 
-Appends an item to a list.
+The constructor for a class.
 
-rachay s = [1]; jodo(s, 2)
+svayam
 
-string_upper(text)
+Parameter
 
-Converts a string to uppercase.
+Refers to the current object instance (like self).
 
-string_upper("hello")
+har_ek
 
-string_lower(text)
+Statement
 
-Converts a string to lowercase.
+A for-each loop to iterate over lists.
 
-string_lower("HELLO")
+roko
 
-string_replace(t,o,n)
+Statement
 
-Replaces a substring with another.
+Break out of a loop.
 
-string_replace("hi", "i", "ello")
+jaari_rakho
 
-string_split(t,sep)
+Statement
 
-Splits a string by a separator.
+Continue to the next iteration of a loop.
 
-string_split("a,b,c", ",")
+aayat
 
-string_strip(text)
+Statement
 
-Removes leading/trailing whitespace.
+Import another .sns file.
 
-string_strip("  hi  ")
+grahan_karo()
 
-File I/O
 Function
 
-Description
+Get input from the user.
 
-file_kholo(name, mode)
+lambai()
 
-Opens a file and returns a file object.
+Function
 
-file_padho(file_obj)
+Get the length of a list, string, or dictionary.
 
-Reads the entire content of the file.
+jodo()
 
-file_likho(file_obj, data)
+Function
 
-Writes data to the file.
-
-file_band_karo(file_obj)
-
-Closes the file.
-
-Math Library
-All functions from Python's math library are available directly.
-
-vad(pi)      # 3.14159...
-vad(sqrt(16)) # 4.0
-
-
-Current Features & What's Next 🚀
-Sanski is an evolving language. Our goal is to make it simple yet powerful. Here's a look at what's working today and what we're building for the future.
-
-What Works Today
-The core features of Sanski are stable and ready to use. This includes the full Object-Oriented system with classes and inheritance, functions, loops (har_ek), and the module import system (aayat). You can build complex, multi-file applications right now.
-
-Coming Soon
-We are actively working on expanding Sanski's capabilities. Here are the top features on our roadmap:
-
-Conditional Logic: The ability to make decisions is crucial. We are planning to introduce yadi (if) and anyatha (else) to control which code runs based on conditions.
-
-While Loops: To complement the har_ek loop, we will be adding a jab_tak (while) loop for situations where you need to repeat a block of code as long as a condition is true.
-
-Improved Error Handling: We are working on making error messages more descriptive, including line numbers and clearer explanations, to make debugging your programs much easier.
-
-Stay tuned for more updates as we continue to grow the Sanski language!
+Append an item to a list.
