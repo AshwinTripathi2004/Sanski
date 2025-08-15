@@ -2,7 +2,7 @@ Sanski Language Docs 📜
 Welcome to the official documentation for Sanski, a simple, scriptable programming language with keywords inspired by Hindi and Sanskrit. This guide will walk you through everything from the basics to advanced features like Object-Oriented Programming.
 
 🚀 Getting Started
-Sanski code is interpreted by a Python script. To run your Sanski programs, you'll need Python 3 installed.
+Sanski code is interpreted by a Python script. To run your Sanski programs, you 'll need Python 3 installed.
 
 File Naming
 Sanski files should use the .sns extension (e.g., my_program.sns).
