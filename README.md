@@ -22,7 +22,7 @@ This repository contains the **core Python interpreter** that brings the Sanski 
 
 To explore the full syntax, in-depth concepts, and complete examples, please visit our official documentation website:  
 
-➡️ **[View the Official Sanski Docs](#)**  
+➡️ **[View the Official Sanski Docs](https://sanski-docs.vercel.app/)**  
 
 ---
 
