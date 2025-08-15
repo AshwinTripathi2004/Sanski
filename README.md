@@ -5,7 +5,7 @@ Welcome to the official documentation for Sanski, a simple, scriptable programmi
 Sanski code is interpreted by a Python script. To run your Sanski programs, you 'll need Python 3 installed.
 
 File Naming
-Sanski files should use the .sns extension (e.g., my_program.sns).
+Sanski files should use the .sns extension (e.g., my_program.sns). 
 
 Execution
 To execute a Sanski file, run the interpreter from your terminal and pass the filename as an argument:
